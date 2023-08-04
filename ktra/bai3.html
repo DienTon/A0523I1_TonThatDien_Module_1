@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button type="button" class="nut" onclick="addCar()">Thêm Xe</button>
+    <button type="button" class="nut" onclick="removeCar()">Xóa xe</button>
+
+    <br>
+    <hr>
+    <br>
+    <div id="tableBody"></div>
+
+
+
+    <script>
+        class Xe {
+            constructor(bienSo, hoTen, cmnd, hangXe, phiGuiXe) {
+                this.bienSo = bienSo;
+                this.hoTen = hoTen;
+                this.cmnd = cmnd;
+                this.hangXe = hangXe;
+                this.phiGuiXe = phiGuiXe;
+            }
+
+            getbienSo() { return this.bienSo }
+            gethoTen() { return this.hoTen };
+            gethangXe() { return this.hangXe };
+            getcmnd() { return this.cmnd; };
+            getphiGuiXe() { return this.phiGuiXe };
+
+
+            setbienSo(bienSo) { this.bienSo = bienSo; };
+            sethoTen(hoTen) { this.hoTen = hoTen; };
+            sethangXe(hangXe) { this.hangXe = hang; };
+            setcmnd(cmnd) { this.cmnd = cmnd; };
+            setphiGuiXe(phiGuiXe) { this.phi = phiGuiXe; };
+
+        }
+
+        let myCar = [];
+
+        let car1 = new Xe("75H13123", "Nguyễn Văn A", "123456", "AAA", "10000");
+        let car2 = new Xe("75H13333", "Nguyễn Văn B", "323245", "BBB", "20000");
+
+        myCar.push(car1);
+        myCar.push(car2);
+        renderCar(myCar);
+
+        function renderCar(myCar) {
+            let tableBody = "<table border='1' class = 'bodytable' >" +
+                "<th class = 'tieuDe'>Biển Số </th>" +
+                "<th class = 'tieuDe'>Họ Tên</th>" +
+                "<th class = 'tieuDe'>CMND</th>" +
+                "<th class = 'tieuDe'>Hãng Xe</th>" +
+                "<th class = 'tieuDe'>Phí Gửi Xe</th>";
+
+            for (let i = 0; i < myCar.length; i++) {
+                tableBody += "<tr>" +
+                    "<td>" + myCar[i].bienSo + "</td>" +
+                    "<td>" + myCar[i].hoTen + "</td>" +
+                    "<td>" + myCar[i].cmnd + "</td>" +
+                    "<td>" + myCar[i].hangXe + "</td>" +
+                    "<td>" + myCar[i].phiGuiXe + "</td>" +
+                    "</tr>";
+            }
+
+            tableBody += "</table>";
+            document.getElementById("tableBody").innerHTML = tableBody;
+
+        }
+
+        function addCar() {
+            let bienSo = +prompt("Nhập biển số");
+            let hoTen = +prompt("Nhập họ tên");
+            let cmnd = +prompt("Nhập cmnd");
+            let hangXe = +prompt("Nhập hãng xe");
+            let phiGuiXe = +prompt("Nhập phí gửi xe");
+
+            if (bienSo == "" || hoTen == '' || cmnd == '' || hangXe == '' || phiGuiXe == '') {
+                alert("vui lòng nhập đầy đủ thông tin");
+                return;
+            }
+
+            let carNew = new Xe(bienSo, hoTen, cmnd, hangXe, phiGuiXe);
+            myCar.push(carNew);
+            renderCar(myCar);
+        }
+
+        function removeCar() {
+            rmCar = prompt("Nhập biển số của xe cần xóa");
+
+            for (let i = 0; i < myCar.length; i++) {
+                if (myCar[i].bienSo == rmCar) {
+                    let choice = confirm("bạn có muốn xóa xe " + rmCar + " không?");
+                    if (choice) {
+                        myCar.splice(i, 1);
+                    }
+                } else {
+                    alert("không tìm thấy xe " + rmCar);
+                }
+            }
+            renderCar(myCar);
+        }
+    </script>
+</body>
+
+</html>

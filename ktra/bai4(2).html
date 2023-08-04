@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="themSp()">thêm</button>
+    <button type="button" onclick="render()">hiện sản phẩm</button>
+
+    <br>
+    <div id="tableBody"></div>
+</body>
+<script>
+    class sanPham{
+        constructor(maSp,tenSp,hangSx,gia){
+            this.maSp = maSp;
+            this.tenSp = tenSp;
+            this.hangSx = hangSx;
+            this.gia = gia;
+        }
+
+        getmaSp(){return this.maSp;}
+        gettenSp(){return this.tenSp;}
+        gethangSx(){return this.hangSx;}
+        getgia(){return this.gia;}
+
+        setmaSp(maSp){this.maSp = maSp;};
+        settenSp(tenSp){this.tenSp = ten;};
+        sethangSx(hangSx){this.hangSx = hang;};
+        setgia(gia){this.gia = gia;};
+
+        toString(){
+            return "[" + this.maSp + "," + this.tenSp + "," + this.hangSx + "," + this.gia + "]";
+        }
+    }
+    let arr = [];
+    let sp1 = new sanPham("123", "bột giặt", "omo", 12000);
+    let sp2 = new sanPham("122", "nước xã", "imi", 20000);
+
+    arr.push(sp1);
+    arr.push(sp2);
+
+    function render(){
+        let table = "<table border = '1'>" + 
+            "<th> mã sản phẩm </th>" +
+            "<th> tên sản phẩm</th>" +
+            "<th> hãng sản xuất </th>" +
+            "<th> Giá </th>" ;
+            for(let i = 0; i < arr.length; i++){
+                table += "<tr>" + 
+                    "<td>" + arr[i].maSp + "</td>" +
+                    "<td>" + arr[i].tenSp + "</td>" +
+                    "<td>" + arr[i].hangSx + "</td>" +
+                    "<td>" + arr[i].gia + "</td>" +
+                    "</tr>" ;
+            }
+            table += "</table>";
+            document.getElementById("tableBody").innerHTML = table;
+    }
+
+    function themSp(){
+        let ma = prompt("Nhập mã")
+        let ten = prompt("Nhập tên")
+        let hang = prompt("Nhập hãng")
+        let gia = prompt("Nhập giá")
+        if(ma == '' || ten == '' || hang == '' || gia == ''){
+            alert("vui lòng nhập đầy đủ thông tin");
+            return;
+        }
+        let addSp = new sanPham(ma, ten, hang, gia);
+        arr.push(addSp);
+        render();
+    }
+</script>
+</html>

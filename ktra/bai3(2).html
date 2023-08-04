@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table></table>
+    <script>
+        let a = prompt("nhập chuỗi");
+        let arr = [];
+
+
+        function strToArray(a) {
+            arr = a.split(",");
+        }
+        
+        function checkSnt(n) {
+            if (n < 2) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function sapXep_snt(array) {
+
+            let b = [];
+            for (let i = 0; i < array.length; i++) {
+                if (checkSnt(array[i])) {
+                    b.push(array[i]);
+                }
+            }
+
+            b.sort((a, b) => a - b);
+            return b;
+        }
+
+        strToArray(a);
+        alert("mảng số nguyên tố trong chuỗi đã nhập là: [" + sapXep_snt(arr) + "]");
+    </script>
+</body>
+
+</html>

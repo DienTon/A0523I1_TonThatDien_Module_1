@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- // kiểm tra số lần xuất hiện của kí tự trong chuỗi -->
+<body>
+    <script>
+        let a = [];
+        let n = prompt("Nhập số lượng phần tử");
+
+        while (n > 20 || n <= 0 || isNaN(n)) {
+            alert("Số lượng phần tử không hợp lệ");
+            n = prompt("Nhập lại ");
+        }
+
+        for (let i = 0; i < n; i++) {
+            a[i] = prompt("Nhập phần tử thứ" + i);
+        }
+
+        function check() {
+            let b = [];
+            for (let i = 0; i < n; i++) {
+                let count = 0;
+                for (let j = 0; j < n; j++) {
+                    if (a[i] === a[j]) {
+                        count++;
+                    }
+                }
+                console.log(a[i]+":" + count);
+            }
+        }
+
+        check();
+    </script>
+</body>
+
+</html>

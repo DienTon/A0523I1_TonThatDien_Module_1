@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function check_array() {
+            let n = +prompt("Nhập sl phần tử");
+            let a = []
+
+            while (n > 50 || n < 2) {
+                    alert("sl phần tử không hợp lệ");
+                     n = +prompt("Nhập lại sl phần tử");
+            }
+
+            for (let i = 0; i < n; i++) {
+                let arr = +prompt("Nhập phần tử thứ " + i);
+                a.push(arr);
+            }
+            console.log(a);
+
+            let mangDangSong = true;  
+
+                for (let i = 1; i < n-1; i++) {
+                if((a[i-1] < a[i] && a[i] > a[i+1]) || (a[i-1] > a[i] && a[i] < a[i+1])){
+                    mangDangSong = true;
+                }else{
+                    mangDangSong = false;
+                }
+            }
+        console.log(mangDangSong);
+    }
+    check_array();
+
+    </script>
+</body>
+
+</html>

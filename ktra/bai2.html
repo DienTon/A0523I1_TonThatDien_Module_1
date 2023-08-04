@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = prompt("Nhập năm cần kiểm tra");
+        let day = str.slice(0,2);
+        let month = str.slice(3,5);
+        let year = str.slice(6,10);
+
+        if(str.length == 10 && str.charAt(2) === "/" && str.charAt(5) === "/" && !isNaN(year) && !isNaN(month) && !isNaN(day)){
+            ktra_nam_nhuan(year); 
+        }else{
+            alert("định dạng không đúng")
+        }
+
+        function ktra_nam_nhuan(year){
+            if((year % 4 === 0) || (year % 100 === 0 && year % 400 === 0)){
+                alert(year + " là năm nhuận");
+            }else{
+                alert(year + " là không năm nhuận");
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
+
