@@ -1,0 +1,169 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dien thoai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td style="border: 0;">
+                <form>
+                    <h1>Nokia</h1>
+                    <table class="table0">
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>
+                                <p style="color: chartreuse;" class="pin" id="pinNKA"> 100</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" class="btn" onclick="btnkraNokia()">Kiểm tra</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn" onclick="btnOnNokia()">Bật</button>
+                                <button type="button" class="btn" onclick="btnOffNokia()">Tắt</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn" onclick="">Sạc</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn">Soạn tin</button>
+                            </td>
+                            <td>
+                                <button class="btn">tin nhắn</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+
+
+            <td>
+                <form>
+                    <h1>iphone</h1>
+                    <table class="table0">
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>
+                                <p style="color: chartreuse;" class="pin" id="pinIP"></p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" class="btn" onclick="btnkraIphone()">Kiểm tra</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn" onclick="btnOnIphone()">Bật</button>
+                                <button type="button" class="btn" onclick="btnOffIphonea()">Tắt</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn">Sạc</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn">Soạn tin</button>
+                            </td>
+                            <td>
+                                <button class="btn">tin nhắn</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+
+        </tr>
+    </table>
+</body>
+<script>
+    class dienThoai {
+        constructor(pin, on, off) {
+            this.pin = pin;
+            this.on = on;
+            this.off = off;
+        }
+
+        bat() {
+            this.on = true;
+            alert('Điện thoại đã bật');
+            this.off = false;
+        }
+
+        tat() {
+            this.off = true;
+            alert('Điện thoại đã tắt');
+            this.on = false;
+        } 
+
+        sac(pinID) {
+            
+            if (this.pin >= 100){
+                alert("Đã sạc đầy pin");
+            }
+            this.pin++;
+            document.getElementById(pinID).innerHTML = this.pin;
+        }
+
+
+
+        check() {
+            if (this.on == true) {
+                alert("Điện thoại đang bật")
+            } else if (this.on == false) {
+                alert("Điện thoại đang tắt")
+            }
+        }
+    }
+
+    let nokia = new dienThoai(80, false, true);
+    let iphone = new dienThoai(99, false, true);
+
+
+
+    function btnkraNokia() {
+        nokia.check();
+    }
+    function btnOnNokia() {
+        document.getElementById("pinNKA").innerHTML = nokia.pin;
+        nokia.bat();
+
+    }
+    function btnOffNokia() {
+        nokia.tat();
+        document.getElementById("pinNKA").innerHTML = '';
+    }
+    function sacPinNokia() {
+        nokia.sac("pinNKA");
+    }
+
+
+    function btnkraIphone() {
+        iphone.check();
+    }
+    function btnOnIphone() {
+        document.getElementById("pinIP").innerHTML = iphone.pin;
+        iphone.bat();
+
+    }
+    function btnOffIphonea() {
+        iphone.tat();
+        document.getElementById("pinIP").innerHTML = '';
+    }
+    function sacPinIphone() {
+        iphone.sac();
+    }
+
+
+
+</script>
+
+</html>

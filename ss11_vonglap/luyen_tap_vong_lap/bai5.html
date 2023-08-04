@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =0; let b=1;let temp,sum=0;
+
+    for (let i = 0; i < 20; i++) {
+        if (i <= 1){
+            document.write(i + " ");
+        }else{
+            temp =a+b;
+            a = b;
+            b= temp;
+            document.write(b+" ");
+            sum+=b;
+        }
+    }
+    document.write('<br>'+ 'tổng 20 số fibonacci = '+ sum);
+</script>
+</body>
+</html>

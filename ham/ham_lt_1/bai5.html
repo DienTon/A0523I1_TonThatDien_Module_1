@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input type="text" name="" id="in">
+<button onclick="bai5()">Tìm</button>
+<br>
+<br>
+<body>
+<script>
+    let a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+    let b = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo'];
+    document.write("<br> mãng 1: "+a)
+    document.write("<br> mãng 2: "+b)
+
+
+    function bai5(chuoi) {
+        chuoi = document.getElementById("in").value;
+
+        for (let i = 0; i < a.length; i++) {
+            if (chuoi === a[i]){
+                alert(b[i]);
+                break
+            }else if (i == a.length - 1){
+                alert("<br>"+"không tìm thấy ngôi sao đã nhập")
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

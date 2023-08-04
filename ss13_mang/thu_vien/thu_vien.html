@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <p>'run','swim','fly','read','write'</p>
+    <input type="text" id="tim">
+    <button type="button" onclick="search()">Tìm</button>
+</form>
+</br>
+<table style="text-align: center" border="1">
+    <tr>
+        <td>Tiếng Anh</td>
+        <td>Tiếng Việt</td>
+    </tr>
+    <tr>
+        <td>swim</td>
+        <td>bơi</td>
+    </tr>
+    <tr>
+        <td>fly</td>
+        <td>bay</td>
+    </tr>
+    <tr>
+        <td>read</td>
+        <td>đọc</td>
+    </tr>
+    <tr>
+        <td>write</td>
+        <td>viết</td>
+    </tr>
+</table>
+
+<script>
+    function search() {
+        let arr1 = Array('run','swim','fly','read','write');
+        let arr2 = Array('chạy','bơi','bay','đọc','viết');
+        let search = document.getElementById("tim").value;
+
+        for(let i =0;i< arr1.length;i++){
+            if(search == arr1[i]){
+                document.writeln(arr2[i]);
+                break
+            }
+            else if(i == arr1.length -1){
+                alert("ko tìm thấy");
+                break;
+            }
+        }
+
+    }
+</script>
+
+</body>
+</html>

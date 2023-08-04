@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bảng cửu chương</h1>
+<script>
+    document.write('<table border="1" >');
+    for (let i = 2; i < 9; i++) {
+        document.write('<tr style="width: 50px">');
+        for (let j = 2; j <9 ; j++) {
+            let result=
+            document.write('<td style="width: 100px">' + i + "x" + j + '=' + (i*j)+ '</td>');
+        }
+    }
+    document.write('</table>')
+</script>
+</body>
+</html>

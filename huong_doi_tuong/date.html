@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let MyDate = function (day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        
+        this.setDate = function (day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+        this.setDay = function (day) {
+            this.day = day;
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setYear = function (year) {
+            this.year = year;
+        }
+
+        
+
+        this.toString = function () {
+            return day + " " + month + " " + year;
+        }
+
+    };
+
+
+
+    let mydate = new MyDate(2, 2, 2007);
+
+
+
+    let day = mydate.getDay();
+    let month = mydate.getMonth();
+    let year = mydate.getYear();
+    let toString = mydate.toString();
+    
+    document.write(mydate.toString());
+
+    mydate.setDate(1, 2, 3);
+
+    document.write(mydate.toString()+ '<br>');
+</script>
+
+</html>

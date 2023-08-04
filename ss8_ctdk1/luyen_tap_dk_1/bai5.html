@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let ktramieng = prompt("Nhập điểm ktra miệng");
+    let ktra15p = prompt("Nhập điểm ktra 15p");
+    let ktragk = prompt("nhập điểm ktra giữa kì");
+    let ktrack = prompt("Nhập điểm ktra cuối kì");
+
+    let dtb = (Number(ktramieng) + Number(ktra15p) + Number(ktragk) + Number(ktrack)) / 4;
+
+    if(dtb < 3.5){
+        alert(dtb +" : Học lực kém");
+    }
+    else if(dtb < 5){
+        alert(dtb +" : Học lực yếu");
+    }
+    else if(dtb < 6.5){
+        alert(dtb +" : Học lực trung bình ");
+    }
+    else if(dtb < 8){
+        alert(dtb +" : Học lực khá ");
+    }
+    else{
+        alert(dtb +" : Học lực giỏi")
+    }
+
+
+</script>
+</body>
+</html>

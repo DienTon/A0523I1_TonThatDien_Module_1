@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n= +prompt("Nhập số lượng phần tử")
+    let a = []
+    nhap();
+    let b = prompt("Nhập ký tự cần tìm")
+
+    if (kiemTra() == -1){
+        alert("kí tự " + b + " không xuất hiện trong mãng "+ a)
+    }else{
+        alert("kí tự " + b + " xuất hiện trong mãng" + kiemTra() + "  lần : " + a)
+    }
+
+    
+    function nhap() {
+        for (let i = 0; i < n; i++) {
+            let nhap = prompt("Nhập phần tử a[" + i + "]")
+            a.push(nhap);
+        }
+    }
+    function kiemTra() {
+        let dem = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (b == a[i]){
+                dem++;
+            }else if(i == a.length-1){
+                return -1;
+            }
+        }
+        return dem;
+    }
+    
+</script>
+</body>
+</html>

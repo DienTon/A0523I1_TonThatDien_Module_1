@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let dt = prompt("Nhập doanh thu bán hàng");
+    let hh = 1;
+    let hoahong = hh.toLocaleString();
+
+
+    if( dt >= 100000000){
+        hoahong = (Number(dt)*5)/100;
+        alert("hoa hồng 5% với doanh thu " + dt + " : " + hoahong);
+    }else if(dt >= 150000000){
+        hoahong = (Number(dt)*10)/100;
+        alert("hoa hồng 10% với doanh thu " + dt + " : " + hoahong);
+    }else if(dt >= 200000000){
+        hoahong = (Number(dt)*15)/100;
+        alert("hoa hồng 15% với doanh thu " + dt + " : " + hoahong);
+    }
+</script>
+</body>
+</html>

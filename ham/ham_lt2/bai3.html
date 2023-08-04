@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let n= +prompt("Nhập số nguyên n")
+
+    function giaiThua() {
+
+        let temp =1;
+        for (let i = 1; i <= n; i++) {
+            temp*=i;
+        }
+        return temp;
+    }
+
+    document.write("Giai thừa của " + n + " là: "+ giaiThua())
+</script>
+</body>
+</html>

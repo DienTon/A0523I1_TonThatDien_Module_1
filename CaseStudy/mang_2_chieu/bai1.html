@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="show"> </div>
+</body>
+
+<script>
+    
+        let m = +prompt("Nhap m");
+        let n = +prompt("Nhap n");
+        let arr = []
+        let sum = 0;
+
+
+        for (let i = 0; i < m; i++) {
+            arr[i] = [];
+            for (let j = 0; j < n; j++) {
+                arr[i][j] = +prompt("Nhập phần tử thứ arr[" + i + "]" + "[" + j + "]");
+            }
+        }
+
+
+        for (let i = 0; i < m; i++) {
+            for (let j = 0; j < n; j++) {
+                if (arr[i][j] % 2 == 0) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        let show = document.getElementById("show");
+        show = "Tổng các số chẳn trong ma trận " + m + " * " + n + " = " + sum;
+    document.write(show);
+</script>
+
+</html>

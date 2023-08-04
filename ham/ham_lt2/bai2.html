@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let r= +prompt("Nhập bán kính")
+    let pi = Math.PI;
+
+    function dienTich(s) {
+        s= r*r*pi;
+        return s;
+    }
+    function chuVi(c) {
+        c=2*r*pi;
+        return c;
+    }
+
+    document.write("Diện tích hình tròn = "+ dienTich())
+    document.write("<br>Chu vi hình tròn  = "+ chuVi())
+</script>
+</body>
+</html>

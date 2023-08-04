@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thang=+prompt("Nhập số tháng cho vay");
+    let tienBanDau=+prompt("Nhập số tiền ban đầu (VND)");
+    let laiXuat=+prompt("Nhập lãi xuất hàng tháng (%)");
+    let temp = tienBanDau;
+
+    for (let i = 1; i <= thang; i++) {
+        tienBanDau=tienBanDau+ tienBanDau*(laiXuat/100);
+
+    }
+
+    document.write("tổng tiền phải trả: " + tienBanDau + "</br>");
+    document.write("tổng tiền lãi: " + (tienBanDau-temp));
+
+</script>
+</body>
+</html>

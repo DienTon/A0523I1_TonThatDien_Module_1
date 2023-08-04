@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let Temperature = function (doC) {
+        this.doC = doC;
+        this.getdoF = function () {
+            return (this.doC * 1.8) + 32;
+        }
+        this.getdoK = function () {
+            return this.doC + 273.15;
+        }
+
+        this.setdoC = function (doC) {
+            this.doC = doC;
+        }
+        this.getdoC = function () {
+            return this.doC;
+        }
+    }
+
+    let n = +prompt('Nhap do C');
+    let tem = new Temperature(n);
+
+    let f = tem.getdoF();
+    let k = tem.getdoK();
+
+    document.write(tem.doC + ' do C doi thanh do F = ' + f + '<br>');
+    document.write(tem.doC + ' do C doi thanh Kenvin = ' + k);
+
+
+</script>
+
+</html>

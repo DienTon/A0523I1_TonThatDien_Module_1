@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form lay survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<h1>Market Research Survey</h1>
+<p>Please take a few moments to complete this satisfaction survey</p>
+<br>
+<hr>
+<body>
+
+<form action="form_lay_survey.html" method="get">
+
+<h4>What is your age range?</h4>
+<select name="age" id="age">
+    <option>18 - 24</option>
+    <option>25 - 34</option>
+    <option>35 - 50</option>
+    <option>50+</option>
+</select>
+
+<h4>What is your yearly income range?</h4>
+<select name="income" id="income">
+    <option>0$ - 25,000$</option>
+    <option>25,001$ - 50,000$</option>
+    <option>50,001$ - 100,000$</option>
+    <option>100,000+$</option>
+</select>
+
+<h4>Gender Identity</h4>
+<label for="Male">
+    <input type="radio" name="Gt" id="Male"> <a>Male</a> <br>
+</label>
+<label for="Female">
+    <input type="radio" name="Gt" id="Female"> <a>female</a> <br>
+</label>
+<label for="Nonbinary">
+    <input type="radio" name="Gt" id="Nonbinary"> <a>Nonbinary</a> <br>
+</label>
+<label for="other">
+    <input type="radio" name="Gt" id="other"> <a>other</a> <br>
+</label>
+
+<h4>Which of the following products have your purchased in the last 2 months. Please check all that apply.
+</h4>
+<label for="pd">
+    <input type="checkbox" name="product" id="pd"> Product 1 <br>
+</label>
+<label for="pd1">
+    <input type="checkbox" name="product" id="pd1"> Product 2 <br>
+</label>
+<label for="pd2">
+    <input type="checkbox" name="product" id="pd2"> Product 3 <br>
+</label>
+
+<h4>How often would you use our new product?</h4>
+
+<label for="tg">
+    <input type="radio" name="often" id="tg"> Daily <br>
+</label>
+<label for="tg1">
+    <input type="radio" name="often" id="tg1"> Weekly <br>
+</label>
+<label for="tg2">
+    <input type="radio" name="often" id="tg2"> Monthly <br>
+</label>
+
+<h4>What would you pay for the new product?</h4>
+<table>
+    <tr>
+        <td >$ </td>
+        <td><input type="text" name="Dollars" id="dollars" style="width: 60px"></td>
+        <td> . </td>
+        <td><input type="text" name="Cents" id="cents" style="width: 20px"></td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>Dollars</td>
+        <td></td>
+        <td>Cents</td>
+    </tr>
+</table>
+
+<h4>What features would you like to see in the new product.</h4>
+<textarea name="text" id="text" cols="50" rows="10"></textarea>
+<p>Please rate your level of agreement with the following statements.</p>
+<table class="bang_to" border="1" cellspacing="0" style="border: gainsboro;" cellpadding="5">
+    <tr  style="background-color: silver ">
+        <td></td>
+        <td>Strongly Disagree</td>
+        <td>Disagree</td>
+        <td>Agree</td>
+        <td>Strongly Agree</td>
+    </tr>
+    <tr>
+        <td class="cot_1"> Our products are priced fairly. </td>
+        <td><input type="radio" name="radio" id="1"> <br> <a>1</a></td>
+        <td><input type="radio" name="radio" id="2"> <br> <a>2</a></td>
+        <td><input type="radio" name="radio" id="3"> <br> <a>3</a></td>
+        <td><input type="radio" name="radio" id="4"> <br> <a>4</a></td>
+    </tr>
+    <tr style="background-color: lightgray">
+        <td class="cot_1">Our products are high quality.</td>
+        <td ><input type="radio" name="radio1" id="5"> <br> <a>1</a></td>
+        <td><input type="radio" name="radio1" id="6"> <br> <a>2</a></td>
+        <td><input type="radio" name="radio1" id="7"> <br> <a>3</a></td>
+        <td><input type="radio" name="radio1" id="8"> <br> <a>4</a></td>
+    </tr>
+    <tr>
+        <td class="cot_1">You would recommend our product to a friend or coworker.</td>
+        <td><input type="radio" name="radio2" id="9"> <br> <a>1</a></td>
+        <td><input type="radio" name="radio2" id="10"> <br> <a>2</a></td>
+        <td><input type="radio" name="radio2" id="11"> <br> <a>3</a></td>
+        <td><input type="radio" name="radio2" id="12"> <br> <a>4</a></td>
+    </tr>
+</table>
+
+<br>
+<input type="submit" value="Submit">
+
+</form>
+</body>
+</html>

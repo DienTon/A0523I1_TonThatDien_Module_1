@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n=prompt('nhập số cần tính')
+    let temp=n;
+
+    document.write(n+"! = ");
+    for (let i = 1; i < n ; i++) {
+        temp=temp*i;
+        if(i == n -1){
+            document.write(i+' x '+n + ' = ');
+        }else {
+            document.write(i+' x ');
+        }
+
+    }
+    document.write(temp)
+</script>
+</body>
+</html>

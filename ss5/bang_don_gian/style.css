@@ -1,0 +1,19 @@
+.Phan_2{
+    border-color: black;
+    border-collapse: collapse;
+}
+.Phan_2 tr:nth-child(1) th{
+    text-align: center;
+    background-color: yellow;
+}
+.Phan_2 td:nth-child(1){
+     text-align: center;
+ }
+.Phan_2 tr:nth-child(2) {
+    text-align: center;
+    background-color: orange;
+}
+
+.Phan_2 tr:nth-child(5){
+    text-align: center;
+}

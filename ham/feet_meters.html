@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="meterToFoot()">meterToFoot</button>
+<button type="button" onclick="footToMeter()"> footToMeter</button>
+<script>
+
+    function footToMeter(){
+        let foot = +prompt("Nhập foot để chuyển thành meters")
+        let meter = 0.305 * foot
+        document.write('meter = '+meter)
+    }
+    function meterToFoot(){
+        let meter = +prompt("Nhập meters để chuyển thành foot")
+        let foot = 3.279 * meter
+        document.write('foot = '+foot)
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = Array(1,2,33,2,89,9,21,100,4,10);
+    document.write(arr)
+    let temp = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length ; j++) {
+            if(arr[i] < arr[j]){
+                temp = arr[i]
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    document.write("<br>"+arr)
+</script>
+</body>
+</html>

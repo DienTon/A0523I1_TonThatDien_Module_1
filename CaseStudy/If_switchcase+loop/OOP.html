@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 style="font-size: 100px;color: blue;"> OOP</h1>
+
+    <button type="button" onclick="bai1()" class="OOP">Bai1</button>
+    <button type="button" onclick="bai2()" class="OOP">Bai2</button>
+    <button type="button" onclick="bai3()" class="OOP">Bai3</button>
+    
+
+    <hr>
+    <br /><br /><br /><br /><br />
+    <div id="show" style="font-size: 50px;"></div>
+
+    <script>
+        function bai1() {
+            let h = +prompt("nhập h")
+
+            for (let i = 1; i <= h; i++) {
+                for (let j = 1; j <= i; j++) {
+                    if (i > 2 && i < h && j > 1 && j < i) {
+                        // document.write("&ensp;");
+                        document.getElementById("show").innerHTML += "&ensp;";
+                    } else {
+                        // document.write("*");
+                        document.getElementById("show").innerHTML += "*";
+                    }
+                }
+                // document.write("<br>");
+                document.getElementById("show").innerHTML += "<br>";
+            }
+        }
+
+        function bai2() {
+            let h = +prompt("nhập h");
+
+            for (let i = 0; i <= h; i++) {
+
+                for (let o = 0; o <= h; o++) {
+                    if (o <= h && o >= h - i) {
+                        document.getElementById("show").innerHTML += "*";
+                    } else {
+                        document.getElementById("show").innerHTML += "&ensp;";
+                    }
+                }
+
+                for (let j = 0; j < i; j++) {
+                    document.getElementById("show").innerHTML += "*";
+                }
+                document.getElementById("show").innerHTML += "<br>";
+            }
+        }
+
+        function bai3() {
+            let h = +prompt("Nhập chiều cao h");
+
+            for (let i = 0; i <= h; i++) {
+                // mat trai
+                for (let o = 0; o <= h; o++) {
+                    
+                    if (o <= h && o == h - i || i == h) {
+                        document.getElementById("show").innerHTML += "*";
+                    }else{
+                        document.getElementById("show").innerHTML += "&ensp;";
+                    }
+                }
+                // mat phai
+                for (let j = 1; j <= i; j++) {
+                    if(i > 0 && j <= i-1 && i < h){
+                        document.getElementById("show").innerHTML += "&ensp;";
+                    }else{
+                    document.getElementById("show").innerHTML += "*";
+                    }
+                }
+                document.getElementById("show").innerHTML += "<br>";
+            }
+        }
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button style="width: 100px;height: 100px;font-size: 25px" onclick="choi()" >Chơi</button>
+
+<script>
+    function choi() {
+        let dem =3;
+        let canDuoi=+prompt("Nhap can duoi");
+        let canTren=+prompt("Nhap can tren");
+        // let n=parseInt(prompt("nhap vao khoan muon doan so"));
+        let n = Math.round(Math.random() * (canDuoi-canTren)+canDuoi);
+
+        console.log(n);
+
+        while(dem > 0){
+            let doan = parseInt(prompt("Nhập số cần đoán: "));
+            if(doan < n){
+                dem--;
+                alert("Số đã đoán bé hơn đáp án , còn " + dem + " lượt đoán");
+
+            }else if(doan > n){
+                dem--;
+                alert("Số đã đoán lớn hơn đáp án , còn " + dem + " lượt đoán");
+            }else{
+                alert("WIN!!!");
+                break;
+            }
+            if(dem == 0){
+                alert("Bạn đã hết lượt đoán, ấn 'Chơi' để bắt đầu lại");
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

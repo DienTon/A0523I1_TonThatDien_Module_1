@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let phicodinh = 25000;
+    let sophut = prompt("Nhap so phut da goi: ");
+
+    if(sophut>200)
+        phi=(sophut-200)*200+150*400+50*600;
+    else if(sophut>50)
+        phi=(sophut-50)*400+50*600;
+    else
+        phi=sophut*600;
+
+    let tong=phi+phicodinh;
+    alert('Tổng số phút đã gọi: ' +sophut +' ; Phí phải trả là : ' + tong);
+</script>
+</body>
+</html>
